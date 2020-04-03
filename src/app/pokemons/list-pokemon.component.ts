@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'; 
 import { Pokemon } from './pokemon'; 
-import { POKEMONS } from './mock-pokemons'; 
 import { Router } from '@angular/router';
 import { PokemonsService } from './pokemons.service';
 
@@ -18,8 +17,8 @@ export class ListPokemonComponent implements OnInit {
   }
 
   getPokemons(): void { 
-    this.pokemons = this.pokemonsService.getPokemons(); 
-  }
+    this.pokemonsService.getPokemons().subscribe(pokemons => this.pokemons = pokemons); 
+   }
   
   selectPokemon(pokemon: Pokemon) { 
     let link = ['/pokemon', pokemon.id]; 

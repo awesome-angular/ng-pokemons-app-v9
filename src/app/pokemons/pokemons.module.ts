@@ -9,7 +9,8 @@ import { PokemonRoutingModule } from './pokemons-routing.module';
 
 import { FormsModule } from '@angular/forms'; 
 import { EditPokemonComponent } from './edit-pokemon.component'; 
-import { PokemonFormComponent } from './pokemon-form.component'; 
+import { PokemonFormComponent } from './pokemon-form.component';
+import { AddPokemonComponent } from './add-pokemon.component';
  
 @NgModule({ 
  imports: [ 
@@ -22,6 +23,7 @@ import { PokemonFormComponent } from './pokemon-form.component';
   DetailPokemonComponent,
   EditPokemonComponent,
   PokemonFormComponent,
+  AddPokemonComponent,
   BorderCardDirective,
   PokemonTypeColorPipe
  ], 
