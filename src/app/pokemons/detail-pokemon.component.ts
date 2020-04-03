@@ -22,5 +22,10 @@ import { PokemonsService } from './pokemons.service';
   
   goBack(): void { 
     this.router.navigate(['/pokemons']); 
-  } 
+  }
+
+  goEdit(pokemon: Pokemon): void { 
+    let link = ['/pokemon/edit', pokemon.id]; 
+    this.router.navigate(link); 
+   }
  }
